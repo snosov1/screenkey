@@ -278,7 +278,7 @@ class ListenKbd(threading.Thread):
                     mod = mod + _("Super+")
 
                 if self.cmd_keys['shift']:
-                    mod = mod + _("Shift+")
+                    mod = mod # + _("Shift+")
                     key = key_shift
                 if self.cmd_keys['capslock'] \
                     and ord(key_normal) in range(97,123):
@@ -315,4 +315,3 @@ class ListenKbd(threading.Thread):
         self.local_dpy.flush()
         self.record_dpy.record_free_context(self.ctx)
         self.logger.debug("Thread stopped.")
-
