@@ -26,33 +26,33 @@ MODE_RAW = 0
 MODE_NORMAL = 1
 
 REPLACE_KEYS = {
-    'XK_Escape':_('Esc '),
-    'XK_Tab':u'TAB ',
-    'XK_Return':u'\u23CE ',
+    'XK_Escape':_(' Esc '),
+    'XK_Tab':u' TAB ',
+    'XK_Return':u' \u23CE ',
     'XK_Space':u' SPC ',
-    'XK_Caps_Lock':_('Caps '),
-    'XK_F1':u'F1 ',
-    'XK_F2':u'F2 ',
-    'XK_F3':u'F3 ',
-    'XK_F4':u'F4 ',
-    'XK_F5':u'F5 ',
-    'XK_F6':u'F6 ',
-    'XK_F7':u'F7 ',
-    'XK_F8':u'F8 ',
-    'XK_F9':u'F9 ',
-    'XK_F10':u'F10 ',
-    'XK_F11':u'F11 ',
-    'XK_F12':u'F12 ',
-    'XK_Home':_('Home '),
-    'XK_Up':u'\u2191',
-    'XK_Page_Up':_('PgUp '),
-    'XK_Left':u'\u2190',
-    'XK_Right':u'\u2192',
-    'XK_End':_('End '),
-    'XK_Down':u'\u2193',
-    'XK_Next':_('PgDn '),
-    'XK_Insert':_('Ins '),
-    'XK_Delete':_('Del '),
+    'XK_Caps_Lock':_(' Caps '),
+    'XK_F1':u' F1 ',
+    'XK_F2':u' F2 ',
+    'XK_F3':u' F3 ',
+    'XK_F4':u' F4 ',
+    'XK_F5':u' F5 ',
+    'XK_F6':u' F6 ',
+    'XK_F7':u' F7 ',
+    'XK_F8':u' F8 ',
+    'XK_F9':u' F9 ',
+    'XK_F10':u' F10 ',
+    'XK_F11':u' F11 ',
+    'XK_F12':u' F12 ',
+    'XK_Home':_(' Home '),
+    'XK_Up':u' \u2191',
+    'XK_Page_Up':_(' PgUp '),
+    'XK_Left':u' \u2190',
+    'XK_Right':u' \u2192',
+    'XK_End':_(' End '),
+    'XK_Down':u' \u2193',
+    'XK_Next':_(' PgDn '),
+    'XK_Insert':_(' Ins '),
+    'XK_Delete':_(' Del '),
     'XK_KP_Home':u'(7)',
     'XK_KP_Up':u'(8)',
     'XK_KP_Prior':u'(9)',
@@ -68,8 +68,8 @@ REPLACE_KEYS = {
     'XK_KP_Subtract':u'(-)',
     'XK_KP_Multiply':u'(*)',
     'XK_KP_Divide':u'(/)',
-    'XK_Num_Lock':u'NumLock ',
-    'XK_KP_Enter':u'\u23CE ',
+    'XK_Num_Lock':u' NumLock ',
+    'XK_KP_Enter':u' \u23CE ',
 }
 
 class ListenKbd(threading.Thread):
@@ -271,11 +271,11 @@ class ListenKbd(threading.Thread):
             if event.type == X.KeyPress:
                 key = key_normal
                 if self.cmd_keys['ctrl']:
-                    mod = mod + _("C-")
+                    mod = mod + _(" C-")
                 if self.cmd_keys['alt']:
-                    mod = mod + _("M-")
+                    mod = mod + _(" M-")
                 if self.cmd_keys['super']:
-                    mod = mod + _("s-")
+                    mod = mod + _(" s-")
 
                 if self.cmd_keys['shift']:
                     key = key_shift
