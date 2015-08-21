@@ -70,7 +70,7 @@ class Screenkey(gtk.Window):
             self.options = {
                 'timeout': 0.8,
                 'position': POS_BOTTOM,
-                'size': SIZE_MEDIUM,
+                'size': SIZE_SMALL,
                 'mode': MODE_NORMAL,
                 'hotkey': '<Ctrl>F1',
                 }
