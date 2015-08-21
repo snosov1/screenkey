@@ -299,7 +299,12 @@ class ListenKbd(threading.Thread):
             else:
                 return
 
-        return key
+        # Modifiers only
+        if mod != '' or (key.startswith('F') and key.endswith(' ')) or key.startswith('Esc'):
+            return key
+        return ""
+
+        #return key
 
     def key_raw_mode(self, event):
         key = ''
